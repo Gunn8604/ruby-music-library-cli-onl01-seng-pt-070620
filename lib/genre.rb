@@ -21,13 +21,8 @@ class Genre
   @@all << self 
   end
 
-  # def self.create(genre)
-  # self.new(genre)
-  # end
-  
-  def self.create(name)
-    genre = self.new(name).save
-    self
+  def self.create(genre)
+  self.new(genre)
   end
   
   def songs 
