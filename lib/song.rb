@@ -31,7 +31,7 @@ def genre
   def genre=(genre)
     @genre = genre
     Genre.all << self
-    genre.add_song(self)     
+    Genre.add_song(self)     
   end
 
   def self.all
