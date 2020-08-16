@@ -30,7 +30,8 @@ class Genre
   end 
   
   def add_song(song)
-    
+    @@all << song
+  end
   
 
 end     #class end
