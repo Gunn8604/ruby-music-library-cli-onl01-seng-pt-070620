@@ -25,6 +25,11 @@ class Genre
   # self.new(genre)
   # end
   
+  def self.create(name)
+    genre = self.new(name).save
+    self
+  end
+  
   def songs 
     @songs
   end 
