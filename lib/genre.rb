@@ -25,6 +25,8 @@ class Genre
   # self.new(genre)
   # end
   
+  
+  
   def songs 
     @songs
   end 
