@@ -29,7 +29,7 @@ class Genre
     @songs
   end 
   
-  def add_song
+  def add_song(song)
     
   
 
