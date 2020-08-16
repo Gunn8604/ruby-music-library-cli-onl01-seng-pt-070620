@@ -31,8 +31,7 @@ def genre
   def genre=(genre)
     @genre = genre
     Genre.all << self
-   
-    #genre.song << self unless genre.song.include?(self)
+    genre.songs << self unless genre.songs.include?(self)
     #Genre.add_song(self)     
   end
 
