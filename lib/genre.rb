@@ -29,5 +29,8 @@ class Genre
     @songs
   end 
   
+  def add_song
+    
+  
 
 end     #class end
