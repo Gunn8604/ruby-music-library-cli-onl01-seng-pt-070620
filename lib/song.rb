@@ -12,7 +12,7 @@ class Song
     if genre != nil 
       self.genre = genre
     end 
-  save    #saving all instances of the song created
+  #save    #saving all instances of the song created
   end
   
   def artist 
@@ -24,7 +24,7 @@ class Song
     artist.add_song(self)     #invokes Artist#add_song to add itself to the artist's collection of songs(artist has many songs)
   end
 
-def genre 
+  def genre 
     @genre 
   end
   
@@ -48,7 +48,32 @@ def genre
   end
 
   def self.create(name)
-  self.new(name)
+    song = new(name)
+    song.save
+    song
   end
 
+  def self.find_by_name(name)
+    self.all.find{ |s| s.name == name }
+  end
+
+  def self.find_or_create_by_name(name)
+    find_by_name(name) || create(name)
+  end
+  # def self.create(name)
+  # self.new(name)
+  # end
+
+  # def self.find_by_name(song_name)
+  #   self.all.find {|song|song.name == song_name}
+  # end
+
+  # def self.find_or_create_by_name(song_name)
+  #   song = self.find_by_name(song_name)
+  #   if song 
+  #     song
+  #   else 
+  #     self.create(name)
+  #   end
+  # end
 end     #class end
