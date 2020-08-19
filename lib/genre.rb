@@ -27,8 +27,7 @@ extend Concerns::Findable
   # end
   
   def self.create(name)
-    genre = self.new(name).save
-    self
+    self.new(name)
   end
   
   def songs 
